@@ -1,4 +1,9 @@
 /* Estilo general */
+html,body{
+    position: relative;
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -6,6 +11,7 @@ body {
     background-color: #1b1b1b;
     color: #f0f0f0;
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 header {
@@ -54,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e74c3c;
+    color: #9e05ac;
 }
 
 /* Si el logo es más grande, puedes ajustar la altura del header y el tamaño de la fuente */
@@ -101,7 +107,7 @@ header .logo img:hover {
 }
 
 .hero .btn {
-    background-color: #e74c3c;
+    background-color: #7406bd;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -113,7 +119,7 @@ header .logo img:hover {
 }
 
 .hero .btn:hover {
-    background-color: #c0392b;
+    background-color: #510485;
     transform: scale(1.1);
 }
 
@@ -180,10 +186,11 @@ img {
     text-transform: uppercase;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: #510485;
     transform: scale(1.1);
 }
 
@@ -274,3 +281,60 @@ footer ul li a:hover {
         font-size: 2rem;
     }
 }
+
+#foro{
+    background-color: rgba(255, 255, 255, 0.212);
+}
+
+#foro img{
+    padding: 10px;
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    margin-bottom: 3.5rem;
+  }
+  .swiper-slide img {
+    height: 55rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+  .swiper-slide h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+  .icons {
+    position: absolute;
+    top: 1rem;
+    left: -10rem;
+  }
+  .swiper-slide:hover .icons {
+    left: 2rem;
+  }
+  .swiper-slide .icons i {
+    display: block;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 0.5rem;
+    line-height: 4.5rem;
+    background: #fff;
+    color: #000;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .swiper-slide .icons i:hover {
+    cursor: pointer;
+    background: #510485;
+    color: #fff;
+  }
+  .swiper-pagination-bullet {
+    background: #fff;
+  }
+  .swiper-pagination-bullet-active {
+    background: #510485;
+  }
