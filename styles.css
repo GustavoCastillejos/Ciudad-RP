@@ -1,0 +1,276 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1e272e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px; /* Fija la altura del header */
+    display: flex;
+    justify-content: space-between; /* Asegura que el logo y la navbar estén en los extremos */
+    align-items: center; /* Alinea verticalmente logo y navbar */
+    padding: 0 20px;
+}
+
+/* Ajuste del logo */
+header .logo img {
+    height: 60px; /* Puedes ajustar el tamaño del logo aquí */
+    vertical-align: middle;
+    transition: height 0.3s ease; /* Añade una transición suave si cambias el tamaño */
+}
+
+/* Alineación de la navbar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que la navbar mantenga su altura */
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    vertical-align: middle; /* Mantiene la alineación vertical de los enlaces */
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Si el logo es más grande, puedes ajustar la altura del header y el tamaño de la fuente */
+header .logo img:hover {
+    height: 80px; /* Cambia este valor según el tamaño que desees para el logo */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('fondo.jpg'); /* Imagen de fondo llamativa */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    z-index: 2;
+    animation: fadeInDown 2s ease;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    z-index: 2;
+    animation: fadeInUp 2s ease;
+}
+
+.hero .btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-top: 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+    z-index: 2;
+}
+
+.hero .btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Secciones Generales */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #2f3640;
+}
+
+section:nth-child(even) {
+    background-color: #1e272e;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #dcdde1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Botones */
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Sección de Reglas */
+.rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rules ul li {
+    background-color: #34495e;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.rules ul li:hover {
+    transform: scale(1.05);
+    background-color: #2ecc71;
+}
+
+.rules ul li::before {
+    content: "✔";
+    color: #2ecc71;
+    margin-right: 10px;
+}
+
+/* Sección Cómo Unirse */
+.join ol {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join ol li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #ecf0f1;
+}
+
+.join ol li strong {
+    color: #e74c3c;
+}
+
+/* Sección de Contacto */
+footer {
+    background-color: #1e272e;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #f0f0f0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #2980b9;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
